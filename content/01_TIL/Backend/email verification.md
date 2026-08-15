@@ -41,7 +41,7 @@ sequenceDiagram
 
 
 
-![[content/static/email-verification.svg]]
+![[static/email-verification.svg]]
 
 
 ```

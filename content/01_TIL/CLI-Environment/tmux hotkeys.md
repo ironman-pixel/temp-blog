@@ -7,4 +7,4 @@ tags:
   - dev-tools
   - terminal
 ---
-![[Pasted image 20251205094422.png]]
+![[static/Pasted image 20251205094422.png]]

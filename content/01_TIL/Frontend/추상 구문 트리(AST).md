@@ -6,7 +6,7 @@ tags:
   - react
 ---
 # ❓ Information
-![[Pasted image 20250617093523.png|400]]
+![[static/Pasted image 20250617093523.png|400]]
 * (Abstract Syntax Tree)
 * 각 언어로 프로그래밍 된 소스 코드는 추상적으로 바뀌게 되고 코드의 구조는 위와 같이 노드로 바뀌게 된다.
 * 이러한 노드들이 모여 만들어진 자료 구조가 AST다.

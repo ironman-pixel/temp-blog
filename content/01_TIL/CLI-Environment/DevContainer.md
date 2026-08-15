@@ -34,7 +34,7 @@ VSCode Extention: Dev Containers 설치
 
 설정 후 VSCode 의 명령 팔레트 안에서 다음 실행 (Docker 가 실행 중이어야함)
 
-![[Pasted image 20251030133842.png | 400]]
+![[static/Pasted image 20251030133842.png | 400]]
 
 그 다음 IDE 가 해당 환경 안에서 열림
 
