@@ -15,4 +15,4 @@ tags:
 
 # 🔰 Content ->  
 
-![[jwt-auth-redis.png]]
+![[content/static/jwt-auth-redis.png]]
