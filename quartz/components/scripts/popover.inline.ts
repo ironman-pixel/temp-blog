@@ -128,6 +128,10 @@ function clearActivePopover() {
 function setupPopovers() {
   const links = [...document.querySelectorAll("a.internal")] as HTMLAnchorElement[]
   for (const link of links) {
+    if (link.querySelector("img, object, svg")) {
+      link.dataset.noPopover = "true"
+      continue
+    }
     link.addEventListener("mouseenter", mouseEnterHandler)
     link.addEventListener("mouseleave", clearActivePopover)
     window.addCleanup(() => {
@@ -137,5 +141,87 @@ function setupPopovers() {
   }
 }
 
-document.addEventListener("nav", setupPopovers)
-document.addEventListener("render", setupPopovers)
+function setupImageLightbox() {
+  let overlay = document.querySelector(".img-lightbox-overlay") as HTMLElement | null
+  if (!overlay) {
+    overlay = document.createElement("div")
+    overlay.className = "img-lightbox-overlay"
+    overlay.innerHTML = `
+      <div class="img-lightbox-close" title="Close (Esc)">&times;</div>
+      <div class="img-lightbox-container"></div>
+    `
+    document.body.appendChild(overlay)
+
+    const closeBtn = overlay.querySelector(".img-lightbox-close")
+    const closeLightbox = () => {
+      overlay?.classList.remove("active")
+      document.body.style.overflow = ""
+    }
+
+    overlay.addEventListener("click", (e) => {
+      if (e.target === overlay || e.target === closeBtn) {
+        closeLightbox()
+      }
+    })
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && overlay?.classList.contains("active")) {
+        closeLightbox()
+      }
+    })
+  }
+
+  const container = overlay.querySelector(".img-lightbox-container")
+  const targets = document.querySelectorAll("article img, article object, article p:has(> object), article div:has(> object)")
+
+  targets.forEach((target) => {
+    const el = target as HTMLElement
+    // Ignore heading anchor links or elements inside a[role="anchor"]
+    if (el.closest('a[role="anchor"]')) return
+
+    const clickHandler = (e: Event) => {
+      e.preventDefault()
+      e.stopPropagation()
+      if (!container) return
+      container.innerHTML = ""
+
+      let sourceEl = el
+      if ((el.tagName.toLowerCase() === "p" || el.tagName.toLowerCase() === "div") && el.querySelector("object")) {
+        sourceEl = el.querySelector("object") as HTMLElement
+      }
+
+      if (sourceEl.tagName.toLowerCase() === "object") {
+        const obj = sourceEl as HTMLObjectElement
+        const img = document.createElement("img")
+        img.src = obj.data
+        img.alt = "Diagram SVG"
+        container.appendChild(img)
+      } else if (sourceEl.tagName.toLowerCase() === "img") {
+        const img = sourceEl as HTMLImageElement
+        const clone = document.createElement("img")
+        clone.src = img.src
+        clone.alt = img.alt || ""
+        container.appendChild(clone)
+      } else {
+        const clone = sourceEl.cloneNode(true) as HTMLElement
+        container.appendChild(clone)
+      }
+
+      overlay?.classList.add("active")
+      document.body.style.overflow = "hidden"
+    }
+
+    el.addEventListener("click", clickHandler)
+    window.addCleanup(() => {
+      el.removeEventListener("click", clickHandler)
+    })
+  })
+}
+
+function initAll() {
+  setupPopovers()
+  setupImageLightbox()
+}
+
+document.addEventListener("nav", initAll)
+document.addEventListener("render", initAll)
