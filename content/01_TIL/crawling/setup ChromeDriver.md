@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - crawling
+  - selenium
+  - chromedriver
+  - python
+  - automation
+---
 ## config.py 에 설정 추가
 ```python
 """

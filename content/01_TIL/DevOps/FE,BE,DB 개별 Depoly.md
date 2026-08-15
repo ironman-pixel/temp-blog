@@ -1,4 +1,13 @@
-
+---
+date: 2026-08-15
+tags:
+  - devops
+  - infra
+  - deployment
+  - frontend
+  - backend
+  - database
+---
 ## 구조
 
 DB: postgresql 

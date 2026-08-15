@@ -1,4 +1,11 @@
-
+---
+date: 2026-08-15
+tags:
+  - frontend
+  - refactoring
+  - architecture
+  - react
+---
 | tool             | option          | version |
 | ---------------- | --------------- | ------- |
 | package manager  | pnpm            |         |

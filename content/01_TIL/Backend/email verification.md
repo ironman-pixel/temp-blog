@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - backend
+  - authentication
+  - email
+  - django
+  - python
+---
 ```mermaid
 sequenceDiagram
     actor User as 사용자

@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - cs
+  - algorithm
+  - time-complexity
+  - space-complexity
+  - data-structure
+---
 # What to analize
 1. time
 

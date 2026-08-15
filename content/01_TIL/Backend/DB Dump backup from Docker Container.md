@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - backend
+  - database
+  - docker
+  - backup
+  - postgresql
+---
 # ❓ Information
 * DB 마이그레이션 관리가 안되는 프로젝트에 투입되어 다음 안건을 제기했다
 

@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - devops
+  - infra
+  - server
+  - dev-environment
+  - linux
+---
 ubuntu server에서 dev server 세팅 과정
 
 

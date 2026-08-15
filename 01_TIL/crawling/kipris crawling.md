@@ -1,3 +1,12 @@
+---
+date: 2026-08-15
+tags:
+  - crawling
+  - python
+  - selenium
+  - patent
+  - automation
+---
 `main` 함수에서 `input` 받아서 크롤링 실행할 것이다.
 
 `Crawler` 클래스에 크롤링 로직 함수 추가할 것이다.
