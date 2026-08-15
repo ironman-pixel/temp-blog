@@ -6,7 +6,7 @@ configuration:
   enablePopovers: true
   analytics:
     provider: plausible
-  locale: ko-KR
+  locale: en-US
   baseUrl: quartz.jzhao.xyz
   ignorePatterns:
     - private
@@ -17,7 +17,7 @@ configuration:
     cdnCaching: true
     typography:
       header: Schibsted Grotesk
-      body: Source Sans Pro
+      body: Noto Sans KR
       code: IBM Plex Mono
     colors:
       lightMode:
