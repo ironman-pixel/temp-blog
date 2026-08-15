@@ -26,6 +26,8 @@ Kubeflow 파트 전담 (Jupyter Notebook, PVC, Pipeline 관리 API 연동 모듈
 
 ## 프로젝트: 국방과학기술표준분류체계
 
+![[pdf_deid_architecture.svg]]
+
 **역할**
 PDF 비식별화 저작 도구 개발
 
@@ -48,6 +50,8 @@ PDF 비식별화 저작 도구 개발
 ---
 
 ## 프로젝트: 도심융합구축사업
+
+![[secure_image_serving_architecture.svg]]
 
 **역할**
 CCTV Re-identification 이미지 저작도구 개발
@@ -72,6 +76,8 @@ CCTV Re-identification 이미지 저작도구 개발
 ---
 
 ## 프로젝트: 이미지의 객체 기반 질의응답 데이터 구축
+
+![[job_allocation_sequence.svg]]
 
 **역할**
 LabelOn 라벨링 플랫폼 통합 솔루션 개발
