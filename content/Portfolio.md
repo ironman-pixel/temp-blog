@@ -77,7 +77,7 @@ CCTV Re-identification 이미지 저작도구 개발
 
 ## 프로젝트: 이미지의 객체 기반 질의응답 데이터 구축
 
-![[static/job_allocation_sequence.svg]]
+![[static/job_allocation_sequence.drawio 복사본.svg]]
 
 **역할**
 LabelOn 라벨링 플랫폼 통합 솔루션 개발
