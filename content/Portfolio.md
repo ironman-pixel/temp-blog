@@ -1,6 +1,8 @@
 ## 프로젝트: 사내 MLOps (Kubeflow, LakeFS, MinIO, MLflow)통합 플랫폼
 
 ![[static/KUBEFLOW_AUTH_FLOW.svg]]
+
+
 **역할**
 Kubeflow 파트 전담 (Jupyter Notebook, PVC, Pipeline 관리 API 연동 모듈 개발)
 
