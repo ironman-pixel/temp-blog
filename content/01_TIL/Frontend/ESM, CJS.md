@@ -19,7 +19,6 @@ tags:
 
 
 # 🔰 Content ->  
-It's like a conversation, you need to explain the information however you must only speak about subjects you understand and like. 
 ## 1️⃣ Intro 
 * EMS, CJS 개요
 ## 2️⃣ Overview 

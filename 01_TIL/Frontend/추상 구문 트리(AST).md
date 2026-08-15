@@ -20,7 +20,6 @@ AST가 무엇이고 어떻게 쓰이는가?
 
 
 # 🔰 Content ->  
-It's like a conversation, you need to explain the information however you must only speak about subjects you understand and like. 
 ## 1️⃣ Intro 
 * eslint가 소스 코드에 AST를 활용하는 이유
 * babel이 AST를 활용하는 이유
