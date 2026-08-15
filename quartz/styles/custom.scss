@@ -33,6 +33,11 @@
   overflow-x: hidden; // Prevents horizontal overflow
 }
 
+// Hide the automatic <hr/> divider inserted right after article content
+article + hr, .center > hr {
+  display: none !important;
+}
+
 @media all and ($mobile) {
   .center {
     padding: 0 1rem;
@@ -65,10 +70,11 @@ article {
     margin: 1.5rem 0;
   }
 
+  // Headings (No automatic underlines/borders)
   h1 {
     color: var(--avatar-pink);
-    border-bottom: 2px solid rgba(239, 68, 192, 0.3);
-    padding-bottom: 0.3em;
+    border-bottom: none !important;
+    padding-bottom: 0;
     margin-top: 1.8em;
     margin-bottom: 0.8em;
     font-weight: 700;
@@ -76,8 +82,8 @@ article {
 
   h2 {
     color: var(--avatar-purple);
-    border-bottom: 1px solid rgba(167, 139, 250, 0.25);
-    padding-bottom: 0.25em;
+    border-bottom: none !important;
+    padding-bottom: 0;
     margin-top: 1.6em;
     margin-bottom: 0.7em;
     font-weight: 600;
@@ -85,8 +91,8 @@ article {
 
   h3 {
     color: var(--avatar-gold);
-    border-bottom: 1px dashed rgba(251, 191, 36, 0.25);
-    padding-bottom: 0.2em;
+    border-bottom: none !important;
+    padding-bottom: 0;
     margin-top: 1.4em;
     margin-bottom: 0.6em;
     font-weight: 600;
@@ -94,6 +100,7 @@ article {
 
   h4 {
     color: var(--avatar-teal);
+    border-bottom: none !important;
     margin-top: 1.2em;
     margin-bottom: 0.5em;
     font-weight: 600;
@@ -101,17 +108,19 @@ article {
 
   h5 {
     color: var(--avatar-mint);
+    border-bottom: none !important;
     margin-top: 1em;
     margin-bottom: 0.4em;
   }
 
   h6 {
     color: var(--avatar-indigo);
+    border-bottom: none !important;
     margin-top: 1em;
     margin-bottom: 0.4em;
   }
 
-  // Heading anchor links (ensure they do NOT look like big image popups)
+  // Heading anchor links
   a[role="anchor"] {
     opacity: 0.4;
     transition: opacity 0.2s ease;
